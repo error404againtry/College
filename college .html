@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muktijodda Abdul Hamid Govt. College</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f5f8fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #0056b3;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: #003366;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1.5px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    nav ul li a {
+      color: white;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h2 {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      font-size: 2.5rem;
+      border-radius: 8px;
+      letter-spacing: 2px;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1100px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    /* About Section */
+    #about {
+      margin-bottom: 3rem;
+    }
+    #about h3 {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 1rem;
+      border-left: 6px solid #0056b3;
+      padding-left: 0.5rem;
+    }
+    #about p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    /* Departments Section */
+    #departments {
+      margin-bottom: 3rem;
+    }
+    #departments h3 {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 1.5rem;
+      border-left: 6px solid #0056b3;
+      padding-left: 0.5rem;
+    }
+    .dept-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 1.5rem;
+    }
+    .dept-item {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #0056b3;
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+    .dept-item:hover {
+      background-color: #e6f0ff;
+    }
+
+    /* Admission Section */
+    #admission {
+      margin-bottom: 3rem;
+    }
+    #admission h3 {
+      font-size: 2rem;
+      color: #003366;
+      margin-bottom: 1rem;
+      border-left: 6px solid #0056b3;
+      padding-left: 0.5rem;
+    }
+    #admission ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      color: #444;
+      font-size: 1.1rem;
+    }
+
+    /* Notice Section */
+    #notice {
+      margin-bottom: 3rem;
+      background: #fff7e6;
+      border-left: 6px solid #ffcc00;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+    }
+    #notice h3 {
+      font-size: 1.8rem;
+      color: #b37400;
+      margin-bottom: 0.8rem;
+    }
+    #notice ul {
+      list-style-type: circle;
+      margin-left: 1.5rem;
+      color: #8a6d00;
+      font-size: 1rem;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: #003366;
+      color: white;
+      padding: 2rem 1.5rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+    #contact h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1.5px;
+    }
+    #contact p {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    #contact a {
+      color: #ffcc00;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background: #001a33;
+      color: #bbb;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px){
+      nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      header {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .dept-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muktijodda Abdul Hamid Govt. College</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#admission">Admission</a></li>
+        <li><a href="#notice">Notice</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to Muktijodda Abdul Hamid Govt. College</h2>
+  </section>
+
+  <main>
+    <section id="about">
+      <h3>About Us</h3>
+      <p>
+        Established in 1995, Muktijodda Abdul Hamid Govt. College is a premier educational institution committed to providing quality education and fostering academic excellence. Our college aims to nurture students to become responsible citizens with strong values, creativity, and leadership skills.
+      </p>
+    </section>
+
+    <section id="departments">
+      <h3>Departments</h3>
+      <div class="dept-list">
+        <div class="dept-item">Science</div>
+        <div class="dept-item">Commerce</div>
+        <div class="dept-item">Arts & Humanities</div>
+        <div class="dept-item">Business Studies</div>
+        <div class="dept-item">Computer Science</div>
+        <div class="dept-item">English</div>
+        <div class="dept-item">Bangla</div>
+      </div>
+    </section>
+
+    <section id="admission">
+      <h3>Admission</h3>
+      <p>Admission is open for the 2025 academic session. Interested candidates are requested to follow the instructions below:</p>
+      <ul>
+        <li>Fill out the online application form available on the college website.</li>
+        <li>Submit a copy of your SSC and HSC certificates.</li>
+        <li>Attach two passport-sized photographs.</li>
+        <li>Pay the admission fee through the specified bank.</li>
+        <li>Admission test dates and results will be announced on the website.</li>
+      </ul>
+    </section>
+
+    <section id="notice">
+      <h3>Latest Notices</h3>
+      <ul>
+        <li>Admission test will be held on August 10, 2025.</li>
+        <li>College reopens on September 1, 2025.</li>
+        <li>Online application deadline: July 31, 2025.</li>
+        <li>Scholarship application open till August 15, 2025.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h3>Contact Us</h3>
+      <p><strong>Address:</strong> 123 College Road, Dhaka, Bangladesh</p>
+      <p><strong>Phone:</strong> +880 1234 567890</p>
+      <p><strong>Email:</strong> <a href="mailto:info@muktijoddacollege.edu.bd">info@muktijoddacollege.edu.bd</a></p>
+      <p><strong>Website:</strong> <a href="http://www.muktijoddacollege.edu.bd" target="_blank">www.muktijoddacollege.edu.bd</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Muktijodda Abdul Hamid Govt. College. All Rights Reserved.
+  </footer>
+</body>
+</html>
